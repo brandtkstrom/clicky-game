@@ -1,14 +1,18 @@
-import React, { FC, MouseEvent } from 'react';
+import React, { FC, useState } from 'react';
 
 interface IEmojiProps {
     image: string,
     alt: string,
-    onClick: (event: MouseEvent) => void
+    emojiClicked: (image: string) => void
 }
 
+export const Emoji: FC<IEmojiProps> = (props) => {
 
-export const Navbar: FC<IEmojiProps> = (props) => {
+    const onEmojiClick = () => {
+        props.emojiClicked(props.image);
+    }
+
     return (
-        <img className="emoji" src={props.image} alt={props.alt} onClick={props.onClick} />
+        <img className="emoji m-3" src={props.image} alt={props.alt} onClick={onEmojiClick} />
     );
 };
