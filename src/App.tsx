@@ -3,9 +3,8 @@ import { Navbar } from './components/Navbar';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div>
       <Navbar score={0} topScore={0} />
-
     </div>
   );
 }

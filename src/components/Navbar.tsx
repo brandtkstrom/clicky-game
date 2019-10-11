@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 interface INavbarProps {
     score: Number;
     topScore: Number;
 }
 
-export const Navbar = (props: INavbarProps) => {
+export const Navbar: FC<INavbarProps> = (props) => {
     return (
         <nav className='navbar fixed-top py-4'>
             <div className='grid w-100'>
