@@ -13,7 +13,7 @@ export const Header: FC<IHeaderProps> = (props): JSX.Element => {
                 <div className='grid w-100'>
                     <div className='row'>
                         <div className='col text-center'>
-                            <a className='text-light' href='/'>
+                            <a className='text-light' href={window.location.href}>
                                 <h3>Emoji Clicky Game</h3>
                             </a>
                         </div>
