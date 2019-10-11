@@ -18,27 +18,114 @@ a:hover {
 
 .emoji {
     box-sizing: border-box;
+    margin: 1rem;
     width: 8rem;
     transition: 100ms ease-in-out;
     border-radius: 50%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .emoji:hover {
    transform: scale(1.2);
    box-shadow: 0 0 30px #333
 }
 
+.message {
+    animation: pop 300ms linear;
+}
+
+.fade-in {
+    animation: fade-in 500ms linear;
+}
+
+.shake {
+    animation: shake 200ms linear;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-10px, 0);
+    }
+    20% {
+        transform: translate(-20px, 10px);
+    }
+    30% {
+        transform: translate(10px, -20px);
+    }
+    40% {
+        transform: translate(-10px, -10px);
+    }
+    50% {
+        transform: translate(20px, 20px);
+    }
+    60% {
+        transform: translate(-20px, -5px);
+    }
+    70% {
+        transform: translate(0, 10px);
+    }
+    80% {
+        transform: translate(20px, 0);
+    }
+    90% {
+        transform: translate(20px, 20px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 @media screen and (max-width: 1280px) {
     h3 {
         font-size: 1.4rem;
+    }
+    .emoji {
+        width: 7.5rem;
+        margin: 0.9rem;
     }
 }
 @media screen and (max-width: 1024px) {
     h3 {
         font-size: 1.2rem;
     }
+    .emoji {
+        width: 7.2rem;
+        margin: 0.7rem;
+    }
 }
 @media screen and (max-width: 800px) {
     h3 {
         font-size: 1rem;
+    }
+    .emoji {
+        width: 5rem;
+        margin: 0.5rem;
     }
 }
