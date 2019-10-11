@@ -11,7 +11,8 @@ export const App: React.FC = (): JSX.Element => {
     const [topScore, updateTopScore] = useState<number>(0);
     const [emojis, shuffle] = useState<string[]>(EmojiMapper.getImages());
     const [message, setMessage] = useState<string>('Click any emoji to begin!');
-    const [clickedSet, updateClicked] = useState<Set<string>>(new Set());
+    const [clickedSet, updateClicked] = useState<Set<string>>(new Set<string>());
+    const [containerClass, setContainerClass] = useState<string>('fade-in');
 
     // Click handler for when an emoji is clicked
     const clicked = (image: string): void => {
@@ -22,6 +23,7 @@ export const App: React.FC = (): JSX.Element => {
         if (clickedSet.has(image)) {
             setMessage('Emoji already guessed. Try again!');
             updateScore(0);
+            setContainerClass('shake');
             updateClicked(new Set<string>());
             return;
         }
@@ -31,6 +33,7 @@ export const App: React.FC = (): JSX.Element => {
         setMessage('Good job! Keep going!');
         const newScore: number = score + 1;
         updateScore(newScore);
+        setContainerClass('');
         if (newScore > topScore) {
             updateTopScore(newScore);
         }
@@ -51,7 +54,7 @@ export const App: React.FC = (): JSX.Element => {
     return (
         <>
             <Header score={score} topScore={topScore} message={message} />
-            <Container>{emojis.map(url => createEmoji(url))}</Container>
+            <Container containerClass={containerClass}>{emojis.map(url => createEmoji(url))}</Container>
             <Footer />
         </>
     );

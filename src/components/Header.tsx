@@ -18,7 +18,7 @@ export const Header: FC<IHeaderProps> = (props): JSX.Element => {
                             </a>
                         </div>
                         <div className='col text-center'>
-                            <h3>{props.message}</h3>
+                            <h3 className="message">{props.message}</h3>
                         </div>
                         <div className='col text-center'>
                             <h3>

@@ -17,6 +17,7 @@ export const Emoji: FC<IEmojiProps> = (props): JSX.Element => {
             src={props.image}
             alt={props.alt}
             onClick={onEmojiClick}
+            draggable={false}
         />
     );
 };
