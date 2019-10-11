@@ -1,0 +1,12 @@
+.emoji:hover {
+    animation: emoji 100ms linear;
+}
+
+@keyframes emoji {
+    0% {
+
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
