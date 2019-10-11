@@ -13,7 +13,7 @@ export const Emoji: FC<IEmojiProps> = (props): JSX.Element => {
 
     return (
         <img
-            className='emoji m-3'
+            className='emoji'
             src={props.image}
             alt={props.alt}
             onClick={onEmojiClick}
