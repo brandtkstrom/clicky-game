@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    text-transform: none;
+}
+
+.emoji {
+    box-sizing: border-box;
+    width: 8rem;
+    transition: 100ms ease-in-out;
+    border-radius: 50%;
+}
+.emoji:hover {
+   transform: scale(1.2);
+   box-shadow: 0 0 30px #333
+}
+
+@media screen and (max-width: 1280px) {
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    h3 {
+        font-size: 1rem;
+    }
+}
