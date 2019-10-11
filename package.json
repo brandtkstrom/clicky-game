@@ -2,11 +2,13 @@
   "name": "clicky-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://brandtkstrom.github.io/clicky-game/",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.12",
     "@types/react": "^16.9.5",
     "@types/react-dom": "16.9.1",
+    "gh-pages": "^2.1.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
