@@ -11,6 +11,11 @@ footer {
     bottom: 0;
 }
 
+a:hover {
+    text-decoration: none;
+    text-transform: none;
+}
+
 .emoji {
     box-sizing: border-box;
     width: 8rem;
